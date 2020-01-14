@@ -1,0 +1,11 @@
+<div>
+<h3>{{title}}</h3>
+<h2>User Name: {{userName}}</h2>
+<br/>
+Type to change the title:
+    <input type="text" [(ngModel)]="title"/>
+<br/>
+<button [disabled]="flag"  (click)="btnClick()" style="background-color: lightslategray;">Change Title</button>
+</div>
+
+

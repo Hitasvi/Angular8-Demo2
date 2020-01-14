@@ -1,0 +1,14 @@
+<div>
+    <h2>Data Service Demo</h2>
+    set Value: <input type="text" [(ngModel)]="un" />
+    <br>
+    <button (click)="setUserName()">Set User Name</button>
+    <button (click)="getUserName()">Get User Name</button>
+    <br>
+    User Name is: <div>{{uname}}</div>
+</div>
+<hr>
+<div>
+    <h3>Custom Pipe Demo</h3>
+    trim2length pipe: {{'India is the best'|trim2length:5}}
+</div>
