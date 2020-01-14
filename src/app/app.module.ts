@@ -12,6 +12,9 @@ import { CustomAttributeDemoComponent } from './custom-attribute-demo/custom-att
 import {DataService} from './data.service';
 import { UseDataServiceComponent } from './use-data-service/use-data-service.component';
 import { Trim2lengthPipe } from './trim2length.pipe';
+import { RouterModule } from '@angular/router';
+import {ProductDetailComponent} from './product-detail/product-detail.component'
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { Trim2lengthPipe } from './trim2length.pipe';
     ApplyColorDirective,
     CustomAttributeDemoComponent,
     UseDataServiceComponent,
-    Trim2lengthPipe
+    Trim2lengthPipe,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

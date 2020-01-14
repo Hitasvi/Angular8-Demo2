@@ -13,6 +13,9 @@
             <th>
                 Product Price
             </th>
+            <th>
+               Details
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +29,9 @@
             <td>
                 50000
             </td>
+            <td>
+                <a [routerLink]="['productDetails',1001]" [queryParams]="{prdName:'Dell'}">Details</a>
+            </td>
         </tr>
         <tr>
             <td>
@@ -37,7 +43,11 @@
             <td>
                 55000
             </td>
+            <td>
+                <a [routerLink]="['productDetails',1002]" [queryParams]="{prdName:'HP'}">Details</a>
+            </td>
         </tr>
     </tbody>
 </table>
+<router-outlet></router-outlet>
 </div>
