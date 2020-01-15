@@ -13,7 +13,10 @@ import {DataService} from './data.service';
 import { UseDataServiceComponent } from './use-data-service/use-data-service.component';
 import { Trim2lengthPipe } from './trim2length.pipe';
 import { RouterModule } from '@angular/router';
-import {ProductDetailComponent} from './product-detail/product-detail.component'
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import { ObservableDemoComponent } from './observable-demo/observable-demo.component'
+import {HttpClientModule} from '@angular/common/http';
+import { APICallDemoComponent } from './apicall-demo/apicall-demo.component'
 
 
 @NgModule({
@@ -26,12 +29,15 @@ import {ProductDetailComponent} from './product-detail/product-detail.component'
     CustomAttributeDemoComponent,
     UseDataServiceComponent,
     Trim2lengthPipe,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ObservableDemoComponent,
+    APICallDemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

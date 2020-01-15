@@ -19,32 +19,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor='let p of products'>
             <td>
-                1001
+                {{p.pid}}
             </td>
             <td>
-               Dell
+               {{p.prdName}}
             </td>
             <td>
-                50000
+               {{p.price}}
             </td>
             <td>
-                <a [routerLink]="['productDetails',1001]" [queryParams]="{prdName:'Dell'}">Details</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                1002
+                <a [routerLink]="['productDetails',p.pid]" [queryParams]="{prdName:p.prdName}">Details</a>
             </td>
             <td>
-               HP
-            </td>
-            <td>
-                55000
-            </td>
-            <td>
-                <a [routerLink]="['productDetails',1002]" [queryParams]="{prdName:'HP'}">Details</a>
+                <button (click)="showDetails(p)">Details</button>
             </td>
         </tr>
     </tbody>
