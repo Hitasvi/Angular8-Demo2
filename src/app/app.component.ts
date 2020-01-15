@@ -13,5 +13,8 @@ export class AppComponent {
  getCount(ct){
    this.count=ct;
  }
- 
+ sum(a,b){
+   let c=a+b;
+   return c;
+ }
 }

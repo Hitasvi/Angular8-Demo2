@@ -6,6 +6,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
 import { APICallDemoComponent } from './apicall-demo/apicall-demo.component';
+import { GuardService } from './guard.service';
 
 
 const routes: Routes = [ {path:'',component:APICallDemoComponent},
@@ -13,7 +14,9 @@ const routes: Routes = [ {path:'',component:APICallDemoComponent},
 {path:'customer',loadChildren:()=>import('./customer/customer.module').then(m=>m.CustomerModule)},
 {path:'aboutUs',component:UseDataServiceComponent},
 {path:'contactUs',component:ProductComponent,
-  children:[{path:'productDetails/:pid',component:ProductDetailComponent}]}
+canActivate:[GuardService],
+  children:[{path:'productDetails/:pid',component:ProductDetailComponent}]},
+  {path:'login',component:APICallDemoComponent},
 ];
 
 @NgModule({

@@ -1,2 +1,30 @@
+<style>
+div{
+    text-align: center;
+    padding: 2%;
+}
+form{
+    padding:2%;
+    text-align: center;
+}
+</style>
+
 <p>API Call Demo</p>
-<p>{{data|json}}</p>
+<div>
+    <h3>Post to Typicode API</h3>
+    <form [formGroup]="frm" (ngSubmit)="submit()">
+        <label for="">Enter Title</label>
+        <input type="text" name="title" formControlName="title">
+        <span [hidden]="frm.controls['title'].valid">**</span>
+        <br>
+        <label for="">Enter Body</label>
+        <input type="text" name="body" formControlName="body">
+        <span [hidden]="frm.controls['body'].valid">**</span>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Post status: {{msg}}</h2>
+    <!-- <pre>{{data|json}}</pre> -->
+</div>
+

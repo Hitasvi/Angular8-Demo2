@@ -13,7 +13,11 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   }));
-
+it('should return sum of two numbers',()=>{
+  const fixture = TestBed.createComponent(AppComponent);
+  const app = fixture.debugElement.componentInstance;
+expect(app.sum(5,7).toEqual(12));
+});
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;

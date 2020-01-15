@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { StructuralDirectiveDemoComponent } from './structural-directive-demo/structural-directive-demo.component';
 import { ApplyColorDirective } from './apply-color.directive';
 import { CustomAttributeDemoComponent } from './custom-attribute-demo/custom-attribute-demo.component';
@@ -37,7 +37,8 @@ import { APICallDemoComponent } from './apicall-demo/apicall-demo.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
